@@ -1,0 +1,13 @@
+<p>
+  <b>Name:</b>
+  <%= @category.name %>
+</p>
+
+<p>
+  <b>Category offer:</b>
+  <%= render :partial => 'category_offer', locals: {category_offer: @category.category_offer} %>
+</p>
+
+
+<%= link_to 'Edit', edit_category_path(@category) %> |
+<%= link_to 'Back', categories_path %>

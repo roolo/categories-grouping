@@ -1,0 +1,2 @@
+module CategoryOffersHelper
+end

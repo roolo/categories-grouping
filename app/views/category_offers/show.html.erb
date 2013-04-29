@@ -1,0 +1,15 @@
+<p>
+  <b>Name:</b>
+  <%= @category_offer.name %>
+</p>
+<p>
+  <b>Categories:</b>
+  <% @category_offer.categories.collect do |co| %>
+   <%= link_to co, category_path(co) %>
+  <% end %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_category_offer_path(@category_offer) %> |
+<%= link_to 'Back', category_offers_path %>

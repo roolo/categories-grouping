@@ -1,0 +1,18 @@
+<h1>Offer: <%= @offer.name %></h1>
+
+<p>
+  <b>Product:</b>
+  <%= link_to @offer.product, @offer.product %>
+</p>
+
+<p>
+  <b>Category &ndash; Offer:</b>
+  <%= link_to @offer.product.category.category_offer,
+              @offer.product.category.category_offer %>
+</p>
+
+
+
+
+<%= link_to 'Edit', edit_offer_path(@offer) %> |
+<%= link_to 'Back', offers_path %>

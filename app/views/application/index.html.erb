@@ -1,0 +1,23 @@
+<div class="hero-unit">
+  <h1>Categories grouping</h1>
+  <p>
+    Has-many bidirectional form demo. This application contains simple
+    1:N pairing. Main thing in this app is to show selecting multiple
+    child items instead of selecting one parent item.
+  </p>
+  <p>
+    Short story <code>&lt;%= f.select :category_ids, Category.all.collect{|c|[c.name, c.id]}, {}, multiple: true %></code> ;)
+  </p>
+</div>
+<p>
+  <dl>
+    <dt><%= link_to 'Products', products_path %></dt>
+    <dd>Products which has normal category</dd>
+    <dt><%= link_to 'Categories', categories_path %></dt>
+    <dd>Normal categories. They are specific so products are stored properly.</dd>
+    <dt><%= link_to raw('Category &ndash; offers'), categories_path %></dt>
+    <dd>Simplified/grouped categories</dd>
+    <dt><%= link_to raw('Offers'), offers_path %></dt>
+    <dd>Done offers. Here in show we see the simplified category</dd>
+  </dl>
+</p>

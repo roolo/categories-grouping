@@ -1,0 +1,23 @@
+<h1>Listing offers</h1>
+
+<table class="table table-striped table-hover">
+  <tr>
+    <th>Name</th>
+    <th>Product</th>
+    <th colspan="3">Actions</th>
+  </tr>
+
+<% @offers.each do |offer| %>
+  <tr>
+    <td><%= offer.name %></td>
+    <td><%= link_to offer.product, offer.product %></td>
+    <td><%= link_to 'Show', offer %></td>
+    <td><%= link_to 'Edit', edit_offer_path(offer) %></td>
+    <td><%= link_to 'Destroy', offer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Offer', new_offer_path %>
